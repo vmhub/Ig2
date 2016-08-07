@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Models\AmazonAPI\SignedRequestHelper.cs" />
     <Compile Include="Models\CreateResponse\ResponseMethods.cs" />
+    <Compile Include="Models\PlainHolders\SearchInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
