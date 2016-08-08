@@ -1,0 +1,23 @@
+﻿@model Ig2.Models.PlainHolders.FoundItems
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetList</title>
+</head>
+<body>
+    <div>
+        @foreach (string item in Model.ItemList)
+        {
+            
+          <p>item</p>
+        }
+    </div>
+</body>
+</html>

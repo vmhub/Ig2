@@ -22,10 +22,10 @@ namespace Ig2.Models.CreateResponse
 
         #region StateMachineValues
 
-        static int i = 1;
-        static int state;
-        static XDocument tempDoc;
-        static byte totalPages;
+     private static int i = 1;
+     private static int state;
+     private static XDocument itemDoc;
+     private static byte totalPages;
 
         #endregion
 
@@ -37,15 +37,15 @@ namespace Ig2.Models.CreateResponse
             associateTag=ConfigurationManager.AppSettings["associateTag"];
         }
 
-         private static XDocument formDocument (string page="1")
+         private static XDocument formDocument (string index,string item,string page)
          {
 
-            SignedRequestHelper helper = new SignedRequestHelper(accessKey, secretKey, destination);
+            SignedRequestHelper helper = new SignedRequestHelper(accessKey, secretKey, destination); // KEY FAILSSSSSSSSSS
             IDictionary<string, string> req = new Dictionary<string, String>();
             req["Service"] = "AWSECommerceService";
-            req["Keywords"] = "qq 33"; // change
+            req["Keywords"] = item; 
             req["Operation"] = "ItemSearch";
-            req["SearchIndex"] = "All"; // change
+            req["SearchIndex"] = index; 
             req["AssociateTag"] = associateTag;
             req["ItemPage"] = page;
             req["ResponseGroup"] = "Offers,Images,ItemAttributes";
@@ -68,12 +68,12 @@ namespace Ig2.Models.CreateResponse
             }
             return responseDocument;
          }
-         public static IList<string> getItemsList(string page)
+         public static IList<string> getItemsList(string index, string item, string page="1")
          {
-             XDocument itemDoc = null;
+             //XDocument itemDoc = null;
              if (totalPages == 0) 
              {
-                 itemDoc = formDocument();
+                 itemDoc = formDocument(index,item,page);
                  totalPages = Byte.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value);
                  totalPages = totalPages > (byte)5 ? (byte)5 : totalPages;
              }
@@ -83,21 +83,21 @@ namespace Ig2.Models.CreateResponse
              {
 
                   if (state == 0)
-                  {
-                      itemDoc = i == 1 ? itemDoc : formDocument(i.ToString());
-                      tempDoc = itemDoc;
-                  }
-                  else itemDoc = tempDoc;
+                //  {
+                      itemDoc = i == 1 ? itemDoc : formDocument(index, item,i.ToString());
+                      //tempDoc = itemDoc;
+                //  }
+                //  else itemDoc = tempDoc;
                   XNamespace ns = itemDoc.Root.GetDefaultNamespace();
-                  IList<XElement> elementz = itemDoc.Descendants(ns + "Item").ToList();
+                  IList<XElement> items = itemDoc.Descendants(ns + "Item").ToList();
 
                   j = state;
                   state = 0;
 
-                  for (; j < elementz.Count; j++)
+                  for (; j < items.Count; j++)
                   {
-                      IEnumerable<XElement> df = elementz[j].Descendants();
-                      string title = df.First(qq => qq.Name.LocalName.Equals("Title")).Value;
+                      IEnumerable<XElement> itemProps = items[j].Descendants();
+                      string title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value;
                       //List<XElement> fef = elementz[j].Descendants().ToList();
                       //string ccc2 = fef[43].Value; //can't use for performance, xml inconsistent...
                       itemList.Add(title);
@@ -110,6 +110,12 @@ namespace Ig2.Models.CreateResponse
 
              }
              return itemList;
+         }
+         public static void Reset()
+         {
+            i = 1;
+            state = totalPages = 0;
+            itemDoc = null;
          }
 
     }
