@@ -8,6 +8,7 @@ using System.Web;
 using AmazonProductAdvtApi;
 using System.Net;
 using System.Configuration;
+using Ig2.Models.PlainHolders;
 namespace Ig2.Models.CreateResponse
 {
     public static class ResponseMethods
@@ -68,17 +69,17 @@ namespace Ig2.Models.CreateResponse
             }
             return responseDocument;
          }
-         public static IList<string> getItemsList(string index, string item, string page="1")
+         public static IList<ItemInfo> getItemsList(string index, string item, string page = "1")
          {
              //XDocument itemDoc = null;
              if (totalPages == 0) 
              {
                  itemDoc = formDocument(index,item,page);
-                 totalPages = Byte.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value);
+                 totalPages = Byte.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value); //possible overflowwwww
                  totalPages = totalPages > (byte)5 ? (byte)5 : totalPages;
              }
              int j = 0;
-             IList<string> itemList = new List<string>(13);
+             IList<ItemInfo> itemList = new List<ItemInfo>(13);
              for (; i <= totalPages; i++)
              {
 
@@ -97,10 +98,19 @@ namespace Ig2.Models.CreateResponse
                   for (; j < items.Count; j++)
                   {
                       IEnumerable<XElement> itemProps = items[j].Descendants();
-                      string title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value;
+                      XElement image = itemProps.First(prop => prop.Name.LocalName.Equals("SmallImage")); // what to index????
+                      XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
+                      
+                      ItemInfo itemInfo = new ItemInfo
+                      {
+                          title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value,
+                          img=image.Descendants().ToList()[0].Value,
+                          price = price.Descendants().ToList()[3].Value
+
+                      };
                       //List<XElement> fef = elementz[j].Descendants().ToList();
                       //string ccc2 = fef[43].Value; //can't use for performance, xml inconsistent...
-                      itemList.Add(title);
+                      itemList.Add(itemInfo);
                       if (itemList.Count == 13)
                       {
                           state = j + 1;

@@ -1,0 +1,20 @@
+﻿@model Ig2.Models.PlainHolders.FoundItems
+@using Ig2.Models.PlainHolders;
+<div>
+    <div>
+        <button type="button">&larr;</button>
+        <button type="button">&rarr;</button>
+        <div>
+            <table>
+                @foreach(ItemInfo item in Model.ItemList)
+                {
+                <tr>
+                    <td><img src="@item.img" /></td>
+                    <td>@item.title</td>
+                    <td>@item.price</td>
+                </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

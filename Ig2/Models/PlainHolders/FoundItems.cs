@@ -8,6 +8,6 @@ namespace Ig2.Models.PlainHolders
     public class FoundItems
     {
         // ????
-        public IList<string> ItemList { get;set; }
+        public IList<ItemInfo> ItemList { get; set; }
     }
 }

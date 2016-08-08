@@ -9,16 +9,28 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <title>Search</title>
 </head>
 <body>
     <div>
-        @using (Html.BeginForm("GetList", "Search", FormMethod.Post))
+        @using (Ajax.BeginForm("GetList","Search",new AjaxOptions()
+        {
+            UpdateTargetId="content",
+            InsertionMode=InsertionMode.Replace,
+            HttpMethod="POST",
+            LoadingElementId=""  
+        }
+        ))
         {   @Html.TextBoxFor(x => x.neededItem)
             @Html.DropDownListFor(x => x.searchIndex, new SelectList(AllSectors.selectList, "Value", "Text"))
             <input type="submit" value="Search" />
         }
         
     </div>
+    <div id="content"></div>
 </body>
 </html>

@@ -22,7 +22,7 @@ namespace Ig2.Controllers
        {
            FoundItems items = new FoundItems();
            items.ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem);
-           return View(items);
+           return PartialView(items);
        }
     }
 }
