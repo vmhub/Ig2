@@ -12,12 +12,12 @@
     <script src="~/Scripts/jquery-3.1.0.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>  
     <title>Search</title>
 </head>
 <body>
     <div>
-        @using (Ajax.BeginForm("GetList","Search",new AjaxOptions()
+        @using (Ajax.BeginForm("getList","Search",new AjaxOptions()
         {
             UpdateTargetId="content",
             InsertionMode=InsertionMode.Replace,

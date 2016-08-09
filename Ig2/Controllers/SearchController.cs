@@ -31,41 +31,41 @@ namespace Ig2.Controllers
             return View();
         }
 
-        //foward / backward + random return... 3 methods mozno bez parametra?GET
-        //(forward)
        [HttpPost]
-        public ActionResult GetList(SearchInfo info)
-       {
-           FoundItems items = null;
-           FoundItems tempItem = null;
-           if (!sesssionThere())
+        public ActionResult getList(SearchInfo info)
+        {
+            ResponseMethods.Reset(); //mby?
+           FoundItems items = new FoundItems();               
+           items.ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem);
+           FoundItems tempItem = new FoundItems
            {
-               items = new FoundItems();
-               items.ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem);
-
-               tempItem = new FoundItems
-               {
-                   ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem, "2"),
-                   pageNr = 2
-               };
-               setSession(tempItem);
-           }
-           else
-           {    
-               items = castSession();
-               byte page = items.pageNr;
-               if ((page+1) > ResponseMethods.returnPages())
-                   page = 1;
-               items.ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem,page.ToString());
-               tempItem = new FoundItems
-               {
-                   ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem, (page+1).ToString()),
-                   pageNr = (byte)(page + 1)
-               };
-               setSession(tempItem);
-           }
-            
+               ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem),
+               pageNr = 2,
+               searchIndex = info.searchIndex,
+               searchItem = info.neededItem
+           };
+           setSession(tempItem);
            return PartialView(items);
+       }
+
+       [HttpGet]
+       public ActionResult Forward()
+       {    
+           FoundItems tempItem = null;
+               FoundItems items = castSession();
+               if (items.ItemList.Count == 0)
+               {
+                   ResponseMethods.Reset();
+                   items.ItemList = ResponseMethods.getItemsList(items.searchIndex, items.searchItem);
+               }
+               tempItem = new FoundItems
+               {
+                   ItemList = ResponseMethods.getItemsList(items.searchIndex, items.searchItem),
+                   searchIndex = items.searchIndex,
+                   searchItem = items.searchItem //re-init???
+               };
+               setSession(tempItem);
+               return PartialView("getList",items);
        }
     }
 }

@@ -2,8 +2,7 @@
 @using Ig2.Models.PlainHolders;
 <div>
     <div>
-        <button type="button">&larr;</button>
-        <button type="button">&rarr;</button>
+        <button type="button" id="forward">&rarr;</button>
         <div>
             <table>
                 @foreach(ItemInfo item in Model.ItemList)
@@ -18,3 +17,4 @@
         </div>
     </div>
 </div>
+<script src="~/Scripts/Functions.js"></script>
