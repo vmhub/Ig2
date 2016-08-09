@@ -9,5 +9,6 @@ namespace Ig2.Models.PlainHolders
     {
         // ????
         public IList<ItemInfo> ItemList { get; set; }
+        public byte pageNr { get; set; }
     }
 }

@@ -26,7 +26,7 @@ namespace Ig2.Models.CreateResponse
      private static int i = 1;
      private static int state;
      private static XDocument itemDoc;
-     private static byte totalPages;
+     private static  ushort totalPages;
 
         #endregion
 
@@ -65,11 +65,15 @@ namespace Ig2.Models.CreateResponse
             }
             catch (Exception ex)
             {
-                //TODO: 
+                //TODO: log
             }
             return responseDocument;
          }
-         public static IList<ItemInfo> getItemsList(string index, string item, string page = "1")
+         public static ushort returnPages()
+         {
+             return totalPages;
+         }
+         public static IList<ItemInfo> getItemsList(string index, string item,string page = "1")
          {
              //XDocument itemDoc = null;
              if (totalPages == 0) 
@@ -77,6 +81,7 @@ namespace Ig2.Models.CreateResponse
                  itemDoc = formDocument(index,item,page);
                  totalPages = Byte.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value); //possible overflowwwww
                  totalPages = totalPages > (byte)5 ? (byte)5 : totalPages;
+                 
              }
              int j = 0;
              IList<ItemInfo> itemList = new List<ItemInfo>(13);
