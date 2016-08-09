@@ -9,7 +9,6 @@ using AmazonProductAdvtApi;
 using System.Net;
 using System.Configuration;
 using Ig2.Models.PlainHolders;
-using System.IO;
 namespace Ig2.Models.CreateResponse
 {
     public static class ResponseMethods
@@ -53,6 +52,7 @@ namespace Ig2.Models.CreateResponse
             req["ResponseGroup"] = "Offers,Images,ItemAttributes";
             req["Timestamp"] = DateTime.Now.ToString("yyyy-mm-ddThh:mm:ssZ");
             string newUri = helper.Sign(req);
+
             XDocument responseDocument = null;
             try
             {
@@ -104,13 +104,13 @@ namespace Ig2.Models.CreateResponse
                   {
                       IEnumerable<XElement> itemProps = items[j].Descendants();
                       XElement image = itemProps.First(prop => prop.Name.LocalName.Equals("SmallImage")); // what to index????
-                      //XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
+                      XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
                       
                       ItemInfo itemInfo = new ItemInfo
                       {
                           title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value,
                           img=image.Descendants().ToList()[0].Value,
-                          price = ""
+                          price = price.Descendants().ToList()[3].Value
 
                       };
                       //List<XElement> fef = elementz[j].Descendants().ToList();
@@ -124,8 +124,6 @@ namespace Ig2.Models.CreateResponse
                   }
 
              }
-            
-
              return itemList;
          }
          public static void Reset()
