@@ -26,7 +26,7 @@ namespace Ig2.Models.CreateResponse
      private static int i = 1;
      private static int state;
      private static XDocument itemDoc;
-     private static  ushort totalPages;
+     private static  uint totalPages;
 
         #endregion
 
@@ -71,7 +71,7 @@ namespace Ig2.Models.CreateResponse
             }
             return responseDocument;
          }
-         public static ushort returnPages()
+         public static uint returnPages()
          {
              return totalPages;
          }
@@ -82,13 +82,13 @@ namespace Ig2.Models.CreateResponse
                  try
                  {
                      itemDoc = formDocument(index,item,page);
-                     totalPages = UInt16.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value);
+                     totalPages = UInt32.Parse(itemDoc.Descendants().First(e => e.Name.LocalName.Equals("TotalPages")).Value);
                      totalPages = totalPages > (byte)5 ? (byte)5 : totalPages;
                  }
                  catch(InvalidOperationException ex)
                  {
                      totalPages = 0;
-                     log.Error("Invalid operation in lambdas: " + ex.ToString());
+                     log.Error("Cannot find needed element in lambda: " + ex.ToString());
                  }
                  catch (ArgumentNullException ex)
                  {
@@ -113,39 +113,51 @@ namespace Ig2.Models.CreateResponse
                   {
                       IEnumerable<XElement> itemProps = items[j].Descendants();
                       ItemInfo itemInfo=null;
+                      string imag =null;
                       try
                       {
                           XElement image = itemProps.First(prop => prop.Name.LocalName.Equals("SmallImage"));
-                          XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
-
-                          itemInfo = new ItemInfo
-                          {
-                              title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value,
-                              img = image.Descendants().ToList()[0].Value,
-                              price = price.Descendants().ToList()[3].Value
-
-                          };
-                          /* have to use .First() instead of direct indexing like
-                           * 
-                           * List<XElement> fef = items[j].Descendants().ToList();                       
-                           * string ccc2 = fef[43].Value;
-                           * 
-                           * since xml indexes are not consistent => less performance
-                           */
-                          itemList.Add(itemInfo);
-                          if (itemList.Count == 13)
-                          {
-                              state = j + 1;
-                              return itemList;
-                          }
+                          imag=image.Descendants().ToList()[0].Value;
                       }
-                      catch(InvalidOperationException ec)
+                      catch (InvalidOperationException ec)
                       {
-                          log.Error("Invalid operation in lambdas: "+ec.ToString());
-                          return Enumerable.Empty<ItemInfo>().ToList();
-                          //http://stackoverflow.com/questions/36330299/how-to-configure-log4net-with-asp-net-mvc-c-sharp-in-visual-studio-2015
-                          //http://www.codeproject.com/Articles/823247/How-to-use-Apache-log-net-library-with-ASP-NET-MVC
+                          log.Error("Cannot find needed element in lambda: " + ec.ToString());
+                          imag="";
+
                       }
+                      string prc=null;
+                      try
+                      {
+                          XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
+                          prc= price.Descendants().ToList()[3].Value;
+                      }
+                      catch (InvalidOperationException ec)
+                      {
+                          log.Error("Cannot find needed element in lambda: " + ec.ToString());
+                          prc = "$0.00";
+                         
+                      }
+                         itemInfo = new ItemInfo
+                         {
+                             title = itemProps.First(prop => prop.Name.LocalName.Equals("Title")).Value,
+                             img = imag,
+                             price =prc
+
+                         };
+                         /* have to use .First() instead of direct indexing like
+                          * 
+                          * List<XElement> fef = items[j].Descendants().ToList();                       
+                          * string ccc2 = fef[43].Value;
+                          * 
+                          * since xml indexes are not consistent => less performance
+                          */
+                         itemList.Add(itemInfo);
+                         if (itemList.Count == 13)
+                         {
+                             state = j + 1;
+                             return itemList;
+                         }
+                   
                      
                   }
 
@@ -155,7 +167,7 @@ namespace Ig2.Models.CreateResponse
          public static void Reset()
          {
             i = 1;
-            state = totalPages = 0;
+            state = 0;
             itemDoc = null;
          }
 

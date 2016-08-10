@@ -12,8 +12,11 @@
     <script src="~/Scripts/jquery-3.1.0.min.js"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>  
-    <title>Search</title>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <link href="~/Styles/StyleSheet.css" rel="stylesheet" />
+    <script src="~/Scripts/hhh.js"></script>
+
+    <title>S3arch</title>
 </head>
 <body>
     <div>
@@ -22,15 +25,19 @@
             UpdateTargetId="content",
             InsertionMode=InsertionMode.Replace,
             HttpMethod="POST",
-            LoadingElementId=""  
+            LoadingElementId="loader"  
         }
         ))
         {   @Html.TextBoxFor(x => x.neededItem)
+            @Html.ValidationMessageFor(x=>x.neededItem)
             @Html.DropDownListFor(x => x.searchIndex, new SelectList(AllSectors.selectList, "Value", "Text"))
             <input type="submit" value="Search" />
         }
         
     </div>
     <div id="content"></div>
+    <div id="loader">
+        <img src="~/Pictures/ajax-loader.gif" />
+    </div>
 </body>
 </html>

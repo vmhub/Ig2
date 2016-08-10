@@ -62,5 +62,10 @@ namespace Ig2.Controllers
                setSession(tempItem);
                return PartialView("getList",items);
        }
+       [HttpPost]
+       public string Json(string baze)
+       {
+           return Ig2.Models.GetRates.Rates.getJson(baze);
+       }
     }
 }

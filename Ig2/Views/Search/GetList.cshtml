@@ -2,8 +2,9 @@
 @using Ig2.Models.PlainHolders;
 <div>
     <div>
-        <button type="button" id="forward">&rarr;</button>
+        <button type="button" id="forward"></button>
         <div>
+            <select id="valz"></select> 
             <table>
                 @foreach(ItemInfo item in Model.ItemList)
                 {
@@ -11,7 +12,6 @@
                     <td><img src="@item.img" /></td>
                     <td>@item.title</td>
                     <td>@item.price</td>
-                    <td id="currency">@</td>
                 </tr>
                 }
             </table>

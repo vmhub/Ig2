@@ -1,0 +1,12 @@
+﻿#forward {
+  background-image: url(../Pictures/1470856478_right.png);
+  background-repeat: no-repeat;
+  background-color:white;
+  background-position: 50% 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
+}
+#loader {
+display:none; 
+}

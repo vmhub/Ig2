@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -83,6 +86,8 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.1.0.intellisense.js" />
+    <Content Include="Pictures\1470856478_right.png" />
+    <Content Include="Pictures\ajax-loader.gif" />
     <Content Include="Scripts\Functions.js" />
     <Content Include="Scripts\jquery-3.1.0.js" />
     <Content Include="Scripts\jquery-3.1.0.min.js" />
@@ -97,6 +102,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Styles\StyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +113,7 @@
     </Compile>
     <Compile Include="Models\AmazonAPI\SignedRequestHelper.cs" />
     <Compile Include="Models\CreateResponse\ResponseMethods.cs" />
+    <Compile Include="Models\GetRates\Rates.cs" />
     <Compile Include="Models\PlainHolders\FoundItems.cs" />
     <Compile Include="Models\PlainHolders\ItemInfo.cs" />
     <Compile Include="Models\PlainHolders\SearchInfo.cs" />
