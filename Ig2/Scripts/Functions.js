@@ -4,3 +4,4 @@
         $('#content').load('/Search/Forward');
     });
 });
+//http://stackoverflow.com/questions/15437007/partial-view-click-event-not-fire

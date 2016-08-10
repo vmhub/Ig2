@@ -9,17 +9,14 @@ namespace Ig2.Controllers
 {
     public class SearchController: Controller
     {   
-        [NonAction] // ?
         private bool sesssionThere()
         {
             return Session["StoredInfo"] != null;
         }
-        [NonAction]
         private void setSession(FoundItems data)
         {
             Session["StoredInfo"] = data;
         }
-        [NonAction]
         private FoundItems castSession()
         {
             return Session["StoredInfo"] as FoundItems;
@@ -34,13 +31,12 @@ namespace Ig2.Controllers
        [HttpPost]
         public ActionResult getList(SearchInfo info)
         {
-            ResponseMethods.Reset(); //mby?
+           ResponseMethods.Reset(); 
            FoundItems items = new FoundItems();               
            items.ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem);
            FoundItems tempItem = new FoundItems
            {
                ItemList = ResponseMethods.getItemsList(info.searchIndex, info.neededItem),
-               pageNr = 2,
                searchIndex = info.searchIndex,
                searchItem = info.neededItem
            };
@@ -50,19 +46,18 @@ namespace Ig2.Controllers
 
        [HttpGet]
        public ActionResult Forward()
-       {    
-           FoundItems tempItem = null;
+       {   
                FoundItems items = castSession();
                if (items.ItemList.Count == 0)
                {
                    ResponseMethods.Reset();
                    items.ItemList = ResponseMethods.getItemsList(items.searchIndex, items.searchItem);
                }
-               tempItem = new FoundItems
+               FoundItems tempItem = new FoundItems
                {
                    ItemList = ResponseMethods.getItemsList(items.searchIndex, items.searchItem),
                    searchIndex = items.searchIndex,
-                   searchItem = items.searchItem //re-init???
+                   searchItem = items.searchItem 
                };
                setSession(tempItem);
                return PartialView("getList",items);

@@ -13,6 +13,8 @@ namespace Ig2
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            log4net.Config.XmlConfigurator.Configure();
+
         }
     }
 }
