@@ -14,7 +14,7 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <link href="~/Styles/StyleSheet.css" rel="stylesheet" />
-    <script src="~/Scripts/hhh.js"></script>
+    <script src="~/Scripts/Functions.js"></script>
 
     <title>S3arch</title>
 </head>
@@ -33,7 +33,7 @@
             @Html.DropDownListFor(x => x.searchIndex, new SelectList(AllSectors.selectList, "Value", "Text"))
             <input type="submit" value="Search" />
         }
-        
+        <select id="currency"></select> 
     </div>
     <div id="content"></div>
     <div id="loader">
