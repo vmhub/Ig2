@@ -39,10 +39,15 @@ namespace Ig2.Models.CreateResponse
             associateTag=ConfigurationManager.AppSettings["associateTag"];
             log=log4net.LogManager.GetLogger(typeof(ResponseMethods));
         }
-
+        /// <summary>
+        /// Forms XML document
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="item"></param>
+        /// <param name="page"></param>
+        /// <returns></returns>
          private static XDocument formDocument (string index,string item,string page)
          {
-
             SignedRequestHelper helper = new SignedRequestHelper(accessKey, secretKey, destination);
             IDictionary<string, string> req = new Dictionary<string, String>();
             req["Service"] = "AWSECommerceService";
@@ -75,6 +80,13 @@ namespace Ig2.Models.CreateResponse
          {
              return totalPages;
          }
+        /// <summary>
+        /// Forms a list of 0-13 elements
+        /// </summary>
+        /// <param name="index"></param>
+        /// <param name="item"></param>
+        /// <param name="page"></param>
+        /// <returns></returns>
          public static IList<ItemInfo> getItemsList(string index, string item,string page = "1")
          {
              if (totalPages == 0)
@@ -149,7 +161,7 @@ namespace Ig2.Models.CreateResponse
                           * List<XElement> fef = items[j].Descendants().ToList();                       
                           * string ccc2 = fef[43].Value;
                           * 
-                          * since xml indexes are not consistent => less performance
+                          * since xml indexes are not consistent
                           */
                          itemList.Add(itemInfo);
                          if (itemList.Count == 13)
@@ -164,6 +176,9 @@ namespace Ig2.Models.CreateResponse
              }
              return itemList;
          }
+        /// <summary>
+        /// State reset
+        /// </summary>
          public static void Reset()
          {
             i = 1;

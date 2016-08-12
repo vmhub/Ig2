@@ -5,6 +5,10 @@
     });
 });
 $(document).ready(function () {
-    var val = parseFloat($("#currency option:selected").val());
-        checkList(val);
+    $('#items tr').each(function () {
+        var cash = parseFloat($(this).children('.cash').html());
+        $(this).children('.cash').text(
+        (cash * currentValue).toFixed(2) 
+        );
+    });
 });

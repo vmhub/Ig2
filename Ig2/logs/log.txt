@@ -289,3 +289,165 @@ ERROR 2016-08-12 03:23:13,377  5649ms ResponseMethods        getItemsList       
 ERROR 2016-08-12 03:23:15,266  7538ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
    at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\SevenThree\Documents\Visual Studio 2013\Projects\Ig2\Ig2\Models\CreateResponse\ResponseMethods.cs:line 119
+ERROR 2016-08-12 10:55:54,036  6728ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 10:59:01,549  5924ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:02,652  7028ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:03,654  8030ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:15,875 20251ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:16,482 20858ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:17,039 21414ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:26,055 30431ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:26,665 31040ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:27,066 31442ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:48,179  5260ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 10:59:58,906 15987ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:59,416 16498ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 10:59:59,920 17002ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:00,686 17768ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:01,317 18399ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:01,984 19066ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:13,457 30539ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:13,973 31054ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:14,519 31601ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:23,481 40563ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:23,993 41075ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:24,528 41609ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 131
+ERROR 2016-08-12 11:00:44,804 61885ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:00:58,801 75883ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:01:16,944  5359ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:01:53,931 11048ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:02:23,320  5232ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:15,143  6603ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:39,700 31160ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:39,737 31197ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:39,766 31226ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:39,779 31239ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:40,679 32139ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:40,720 32180ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:41,644 33105ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:04:41,687 33147ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:05:55,499 13779ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:06:10,636 28915ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:06:45,513 10810ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:08:47,078 12236ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:10:49,446  9728ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:11:47,470 18824ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:12:36,821  8170ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:16:05,913  6272ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:17:56,799 12273ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:19:09,279  6134ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:19:30,431 27287ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:20:19,452  9496ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:36:12,017 20787ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:42:13,597  7707ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:44:43,658  9598ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:45:04,480 30420ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143
+ERROR 2016-08-12 11:45:10,330 36271ms ResponseMethods        getItemsList       - Cannot find needed element in lambda: System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at Ig2.Models.CreateResponse.ResponseMethods.getItemsList(String index, String item, String page) in c:\Users\Administrator\Desktop\swegerino\Ig2\Models\CreateResponse\ResponseMethods.cs:line 143

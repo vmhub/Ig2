@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Collections.ObjectModel;
-using System.Web;
 using System.Web.WebPages.Html;
 namespace Ig2.Models.Sectors
 {
     public static class AllSectors
     {
+        /// <summary>
+        /// Sectors collection
+        /// </summary>
         public static readonly ReadOnlyCollection<SelectListItem> selectList = new ReadOnlyCollection<SelectListItem>
                 (
                 new List<SelectListItem>

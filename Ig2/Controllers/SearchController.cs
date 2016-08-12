@@ -9,26 +9,45 @@ namespace Ig2.Controllers
 {
     public class SearchController: Controller
     {   
+        /// <summary>
+        /// Checks if session exists
+        /// </summary>
+        /// <returns></returns>
         private bool sesssionThere()
         {
             return Session["StoredInfo"] != null;
         }
+        /// <summary>
+        /// Sets the session to passed value
+        /// </summary>
+        /// <param name="data"></param>
         private void setSession(FoundItems data)
         {
             Session["StoredInfo"] = data;
         }
+        /// <summary>
+        /// Type casts session
+        /// </summary>
+        /// <returns></returns>
         private FoundItems castSession()
         {
             return Session["StoredInfo"] as FoundItems;
         }
-
+        /// <summary>
+        /// Index page controller
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public ActionResult Search()
         {
             return View();
         }
-
-       [HttpPost]
+        /// <summary>
+        /// Returns first item list if there is one
+        /// </summary>
+        /// <param name="info"></param>
+        /// <returns></returns>
+        [HttpPost]
         public ActionResult getList(SearchInfo info)
         {
            ResponseMethods.Reset(); 
@@ -43,7 +62,10 @@ namespace Ig2.Controllers
            setSession(tempItem);
            return PartialView(items);
        }
-
+        /// <summary>
+        /// Forward click controller / returns more data (loop 5>5:1)
+        /// </summary>
+        /// <returns></returns>
        [HttpGet]
        public ActionResult Forward()
        {   
@@ -62,9 +84,14 @@ namespace Ig2.Controllers
                setSession(tempItem);
                return PartialView("getList",items);
        }
+        /// <summary>
+        /// Returns currency JSON
+        /// </summary>
+        /// <param name="baze"></param>
+        /// <returns></returns>
        [HttpPost]
        public string Json(string baze)
-       {
+       {    
            return Ig2.Models.GetRates.Rates.getJson(baze);
        }
     }
