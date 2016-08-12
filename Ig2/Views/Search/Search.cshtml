@@ -14,26 +14,35 @@
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
     <link href="~/Styles/StyleSheet.css" rel="stylesheet" />
+    <link href="~/Styles/bootstrap.min.css" rel="stylesheet" />
     <script src="~/Scripts/Functions.js"></script>
-
+    <script src="~/Scripts/bootstrap.min.js"></script>
     <title>S3arch</title>
 </head>
 <body>
-    <div>
-        @using (Ajax.BeginForm("getList","Search",new AjaxOptions()
+    <div id="container">
+        @using (Ajax.BeginForm("getList", "Search", new AjaxOptions()
         {
-            UpdateTargetId="content",
-            InsertionMode=InsertionMode.Replace,
-            HttpMethod="POST",
-            LoadingElementId="loader"  
+            UpdateTargetId = "content",
+            InsertionMode = InsertionMode.Replace,
+            HttpMethod = "POST",
+            LoadingElementId = "loader"
         }
         ))
-        {   @Html.TextBoxFor(x => x.neededItem)
-            @Html.ValidationMessageFor(x=>x.neededItem)
-            @Html.DropDownListFor(x => x.searchIndex, new SelectList(AllSectors.selectList, "Value", "Text"))
-            <input type="submit" value="Search" />
+        {
+        <fieldset class="form-group">
+            @Html.TextBoxFor(x => x.neededItem, new { @class = "form-control", placeholder = "Enter item name" })
+            @Html.ValidationMessageFor(x => x.neededItem)
+            @Html.DropDownListFor(x => x.searchIndex, new SelectList(AllSectors.selectList, "Value", "Text"),new { @class = "form-control"})
+        </fieldset>
+        <div>
+            <select id="currency"></select>
+        </div>
+         <div id="send">
+             <input type="submit" value="Search" class="btn btn-primary" />
+         </div>
         }
-        <select id="currency"></select> 
+        
     </div>
     <div id="content"></div>
     <div id="loader">

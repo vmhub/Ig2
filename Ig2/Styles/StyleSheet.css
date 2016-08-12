@@ -6,7 +6,21 @@
   height: 40px;
   width: 40px;
   border: none;
+  cursor:pointer;
 }
 #loader {
-display:none; 
+    text-align:center;
+    display:none; 
+}
+#fwd,#send {
+    text-align:center;
+    margin:3% 0%;
+}
+.field-validation-error 
+{
+    color: Red;
+}
+#container {
+    width:30%;
+    margin: 0 auto;
 }

@@ -129,12 +129,12 @@ namespace Ig2.Models.CreateResponse
                       try
                       {
                           XElement price = itemProps.First(prop => prop.Name.LocalName.Equals("OfferSummary"));
-                          prc= price.Descendants().ToList()[3].Value;
+                          prc= price.Descendants().ToList()[3].Value.Replace("$","");
                       }
                       catch (InvalidOperationException ec)
                       {
                           log.Error("Cannot find needed element in lambda: " + ec.ToString());
-                          prc = "$0.00";
+                          prc = "0.00";
                          
                       }
                          itemInfo = new ItemInfo
@@ -167,6 +167,7 @@ namespace Ig2.Models.CreateResponse
          public static void Reset()
          {
             i = 1;
+            totalPages = 0;
             state = 0;
             itemDoc = null;
          }

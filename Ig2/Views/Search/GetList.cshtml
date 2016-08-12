@@ -2,16 +2,18 @@
 @using Ig2.Models.PlainHolders;
 <div>
     <div>
+        <div id="fwd">
         <button type="button" id="forward"></button>
+         </div>
         <div>
-            <table>
-                @foreach(ItemInfo item in Model.ItemList)
+            <table id="items" class="table table-striped">
+                @foreach (ItemInfo item in Model.ItemList)
                 {
-                <tr>
-                    <td><img src="@item.img" /></td>
-                    <td>@item.title</td>
-                    <td>@item.price</td>
-                </tr>
+                    <tr>
+                        <td><img src="@item.img" /></td>
+                        <td>@item.title</td>
+                        <td class="cash">@item.price</td>
+                    </tr>
                 }
             </table>
         </div>
